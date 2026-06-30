@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidtoAudio - The Ultimate MP4 to WAV Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937'
+                        },
+                        cyan: {
+                            neon: '#00f2fe'
+                        },
+                        purple: {
+                            deep: '#7f04ff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #00f2fe, #7f04ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-custom {
+            background: linear-gradient(to right, #00f2fe, #7f04ff);
+        }
+        .glow-button {
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+            transform: translateY(-2px);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+        }
+        .glass-button {
+            background: rgba(17, 24, 39, 0.4);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 242, 254, 0.5);
+            transition: all 0.3s ease;
+        }
+        .glass-button:hover {
+            background: rgba(0, 242, 254, 0.1);
+            border-color: #00f2fe;
+            transform: translateY(-2px);
+        }
+        .faq-block {
+            background: rgba(17, 24, 39, 0.8);
+            border-left: 4px solid #7f04ff;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-card border-b-0 border-b border-cyan-neon/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold tracking-tight text-white">
+                        Vidto<span class="text-gradient">Audio</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#download" class="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-custom glow-button">
+                        <i class="fa-solid fa-download mr-2"></i> Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        
+        <!-- Hero Section -->
+        <section class="text-center py-16 lg:py-24 relative">
+            <div class="absolute inset-0 z-[-1] overflow-hidden">
+                <div class="absolute -top-1/2 -left-1/2 w-full h-full bg-purple-deep opacity-20 blur-[120px] rounded-full"></div>
+                <div class="absolute -bottom-1/2 -right-1/2 w-full h-full bg-cyan-neon opacity-20 blur-[120px] rounded-full"></div>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+                VidtoAudio - The Ultimate <br class="hidden sm:block" />
+                <span class="text-gradient">MP4 to WAV</span> Converter
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Extract crystal-clear audio from videos completely offline with built-in AI Noise Reduction.
+            </p>
+            
+            <div id="download" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-gradient-custom glow-button">
+                    <i class="fa-brands fa-amazon mr-2 text-xl"></i> Get it on Amazon Appstore
+                </a>
+                <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-cyan-neon glass-button">
+                    <i class="fa-brands fa-android mr-2 text-xl"></i> Direct Download APK
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl hover:border-purple-deep transition-colors duration-300">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-lg bg-dark-800 border border-cyan-neon/30 text-cyan-neon mb-6">
+                        <i class="fa-solid fa-file-audio text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Any Format Extraction</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Seamlessly convert from MP4, MP3, WAV, and AAC formats. Extract high-quality audio tracks without any loss in fidelity.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:border-purple-deep transition-colors duration-300">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-lg bg-dark-800 border border-cyan-neon/30 text-purple-deep mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI-Powered Noise Reduction</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Clean up your audio instantly. Our built-in AI detects and removes background noise, wind, and static from your extractions.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:border-cyan-neon transition-colors duration-300">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-lg bg-dark-800 border border-purple-deep/30 text-cyan-neon mb-6">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">100% Secure Offline Processing</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Your privacy matters. All conversions and AI enhancements happen entirely on your device, without requiring an internet connection.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:border-cyan-neon transition-colors duration-300">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-lg bg-dark-800 border border-purple-deep/30 text-purple-deep mb-6">
+                        <i class="fa-solid fa-scissors text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Built-in Audio Trimmer</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Edit on the go. Precisely cut, trim, and save the exact portion of the audio you need right after extraction.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEO Content Section -->
+        <section class="py-16">
+            <div class="glass-card p-8 md:p-12 rounded-3xl border-purple-deep/30">
+                <h2 class="text-3xl font-bold text-white mb-6">Fastest MP4 to WAV Converter Offline</h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+                        When you need to <strong>extract audio from video</strong> quickly and securely, VidtoAudio is the ultimate tool for Android users. Designed with a focus on speed and privacy, our app acts as a powerful <strong>mp4 to wav converter</strong> that processes everything locally. You never have to worry about uploading your personal files to third-party cloud servers. With our <strong>secure offline processing</strong>, your data stays entirely on your device, ensuring maximum privacy and zero data usage during conversions.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Beyond simple extraction, VidtoAudio empowers creators by combining lightning-fast conversion rates with intelligent features like AI-powered noise reduction and built-in trimming. Whether you are a podcaster looking to isolate a voice track, a musician saving a riff, or just someone who wants to save a speech from a video, transforming your media has never been easier or safer. Experience crystal clear sound quality without the wait.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-6 max-w-4xl mx-auto">
+                
+                <div class="faq-block p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-cyan-neon mr-3"></i>
+                        Does VidtoAudio require an internet connection?
+                    </h3>
+                    <p class="text-gray-400 pl-8">
+                        No, VidtoAudio is built entirely for offline use. You can extract, convert, and trim your audio files anywhere, anytime, without needing Wi-Fi or cellular data.
+                    </p>
+                </div>
+
+                <div class="faq-block p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-cyan-neon mr-3"></i>
+                        Will the AI noise reduction distort my voice?
+                    </h3>
+                    <p class="text-gray-400 pl-8">
+                        Our advanced AI models are specifically trained to isolate human vocals while suppressing background noise. It maintains the natural tone and clarity of your voice while eliminating unwanted static.
+                    </p>
+                </div>
+
+                <div class="faq-block p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-cyan-neon mr-3"></i>
+                        What formats can I save my extracted audio as?
+                    </h3>
+                    <p class="text-gray-400 pl-8">
+                        You can export your extracted files directly into high-quality WAV, MP3, or AAC formats, making it easy to use them across different devices and editing software.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t-0 border-t border-purple-deep/20 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 mb-4 md:mb-0">
+                &copy; 2026 VidtoAudio. All rights reserved.
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="text-gray-400 hover:text-cyan-neon transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-cyan-neon transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-cyan-neon transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
